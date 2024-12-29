@@ -1,0 +1,9 @@
+# Output directories and data
+*/output/
+*/output/*
+
+
+
+# Environment files that might contain sensitive info
+.env
+.env.*

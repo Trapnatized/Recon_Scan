@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  recon:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data
+      # - ./recon.sh:/opt/tools/recon.sh  # Mount script for live editing
+    environment:
+      - THREADS=10
+      - OUTPUT_DIR=/output
+      # - SHODAN_API_KEY=${SHODAN_API_KEY}
+    # env_file:
+    #   - .env
+    stdin_open: true
+    tty: true
+
