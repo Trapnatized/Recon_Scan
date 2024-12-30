@@ -3,7 +3,10 @@
 */output/*
 *.txt
 
+# Config files
+configs/*
+configs/**/*
 
 # Environment files that might contain sensitive info
-# .env
-# .env.*
+.env
+.env.*
