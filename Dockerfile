@@ -47,6 +47,11 @@ RUN git clone https://github.com/iamj0ker/bypass-403 /opt/tools/bypass-403 && \
 COPY recon.sh /opt/tools/
 RUN chmod +x /opt/tools/recon.sh
 
+# Copy config files
+RUN mkdir -p /root/.config/uncover /root/.config/subfinder
+COPY  configs/uncover/* /root/.config/uncover/
+COPY configs/subfinder/* /root/.config/subfinder/
+
 # Create working directory
 WORKDIR /data
 

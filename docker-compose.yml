@@ -11,9 +11,9 @@ services:
     environment:
       - THREADS=10
       - OUTPUT_DIR=/output
-      # - SHODAN_API_KEY=${SHODAN_API_KEY}
-    # env_file:
-    #   - .env
+      - SHODAN_API_KEY=${shodan_API_KEY}
+    env_file:
+      - .env
     stdin_open: true
     tty: true
 
